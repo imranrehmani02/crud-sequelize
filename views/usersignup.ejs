@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>User Registration</title>
+    </head>
+    <body>
+        <center>
+            <h1>User Registration</h1>
+
+            <br>
+            <a href='/'>Home</a>
+            <hr><br><br>
+
+
+            <table border='2px' cellspacing='3px' cellpadding='4px'>
+                <form action='/user/signup' method='POST'>
+                    <tr><th>Name : </th>
+                    <td><input type='text' name='name'></td>
+                </tr>
+
+                <tr>
+                    <th>Email : </th>
+                    <td><input type='email' name='email'></td>
+                </tr>
+
+                <tr>
+                    <th>Contact No : </th>
+                    <td><input type='number' name='phone'></td>
+                </tr>
+
+                <tr>
+                    <th>Password : </th>
+                    <td><input type='password' name='password'></td>
+                </tr>
+
+                <tr>
+                    <td colspan='2'><center><input type='submit' value='Sign Up'></center></td>
+                </tr>
+                </form>
+            </table>
+
+            <br><hr><br><br>
+
+            <p>If you already Registered ? &nbsp;&nbsp;
+                <a href='/user/login'>Login</a>
+            </p>
+        </center>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>User Home Page</title>
+    </head>
+    <body>
+        <center>
+            <h1>User Home Page</h1>
+            
+            <br><hr><br><br>
+   <h2>Hello, <%= email%></h2>
+            <a href='/user/logout'>Logout</a>
+            <br><br>
+
+            <table border='3px' cellpadding='6px' cellspacing=3px>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th colspan='2'><center>Action</center></th>
+                </tr>
+        
+                <% result.forEach(function(rec)
+                {
+                    %>
+                <tr>
+                    <td><%= rec.name %></td>
+                    <td><%= rec.email %></td>
+                    <td><%= rec.phone %></td>
+                    <td>
+                        <a href="/user/remove?email=<%= rec.email%>">Delete</a>
+                    </td>
+                    <td>
+                        <a href="/user/update?email=<%= rec.email%>&name=<%= rec.name%>&phone=<%= rec.phone%>">Update</a>
+                    </td>
+                </tr>
+                <% }) %>
+        
+            </table>
+        </center>
+    </body>
+</html>
